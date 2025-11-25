@@ -47,7 +47,7 @@ sudo apt install build-essential git
 git clone https://github.com/iamaisim/ProjectAirSim.git
 ```
 
-2. From the `~/projectairsim/` folder, install the prerequisites:
+2. From the `~/ProjectAirSim/` folder, install the prerequisites:
 
 ```
 ./setup_linux_dev_tools.sh
@@ -215,7 +215,7 @@ An up-to-date Ubuntu 22.04.5 LTS installation comes with Python 3.10.12. Project
 
 3. Install the Project AirSim Python client library:
 
-        cd ~/projectairsim
+        cd ~/ProjectAirSim
         python -m pip install -e client/python/projectairsim
     
     If you get this error:
@@ -228,7 +228,7 @@ An up-to-date Ubuntu 22.04.5 LTS installation comes with Python 3.10.12. Project
 
 ## Build Project AirSim From Source as a Developer
 
-From the ~/projectairsim folder, run the `build.sh` shell script.
+From the ~/ProjectAirSim folder, run the `build.sh` shell script.
 
 ### build.sh Options
 
@@ -271,13 +271,13 @@ To perform a full Project AirSim build:
 
 ### Project AirSim Component Locations
 
-The sim lib components and unit test executables are built in the `projectairsim/build/` folder using CMake, and are automatically copied to the Unreal Blocks environment folder to be ready for building the plugin.
+The sim lib components and unit test executables are built in the `ProjectAirSim/build/` folder using CMake, and are automatically copied to the Unreal Blocks environment folder to be ready for building the plugin.
 
-The Plugin components are built in the `projectairsim/unreal/Blocks/` folder using the Unreal Engine's build system.
+The Plugin components are built in the `ProjectAirSim/unreal/Blocks/` folder using the Unreal Engine's build system.
 
-The packaged outputs (sim lib components, UE Plugin, Blocks stand-alone executable) are copied to the `projectairsim/packages/` folder, where they can be picked up for external uses.
+The packaged outputs (sim lib components, UE Plugin, Blocks stand-alone executable) are copied to the `ProjectAirSim/packages/` folder, where they can be picked up for external uses.
 
-The Python client files are in the `projectairsim/client/python/` folder, with the Project AirSim Client Library in the `projectairsim/client/python/projectairsim` sub-folder.
+The Python client files are in the `ProjectAirSim/client/python/` folder, with the Project AirSim Client Library in the `ProjectAirSim/client/python/projectairsim` sub-folder.
 
 ### Checking Client Operation
 
