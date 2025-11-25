@@ -228,9 +228,18 @@ An up-to-date Ubuntu 22.04.5 LTS installation comes with Python 3.10.12. Project
 
 ## Build Project AirSim From Source as a Developer
 
-From the ~/ProjectAirSim folder, run the `build.sh` shell script.
+### Building using the Unreal Engine Installed Build
 
-### build.sh Options
+To get Project AirSim built for Development, run the `build.sh` shell script run these two commands from the ~/ProjectAirSim folder.
+
+```
+build.sh simlibs_release
+build.sh blocks_development
+```
+
+#### build.sh Options
+
+All options for build.sh are listed here for reference.
 
 `build.sh {target from below}`
 
@@ -250,24 +259,6 @@ package_plugin = Package Project AirSim UE Plugin for Debug + Release
 package_blocks_debuggame = Package stand-alone Blocks environment executable for DebugGame
 package_blocks_development = Package stand-alone Blocks environment executable for Development
 ```
-### Building using the Unreal Engine Installed Build
-
-Running any of the `build.sh` options apart from `build.sh all` and and `build.sh package_plugin` is possible using the Unreal Engine Installed Build completed in the Initial Setup steps. This is because the Unreal Engine build was compiled using the flag `-set:GameConfigurations="DebugGame;Development"`. Simply run the options that are required from the command line.
-
-#### Performing `build.sh all` and `build.sh package_plugin` *(not required, for reference only)*
-
-This step is not required to be run, but is here for information purposes only. `build.sh all` and `build.sh package_plugin` will perform a Shipping level build as part of its script and requires the pre-built source downloaded from the Unreal Engine site. Building it using the compiled source code will result in an error on compilation:
-
-`Targets cannot be built in the Shipping configuration with this engine distribution.`
-
-To perform a full Project AirSim build:
-
-1. Download the `Linux_Unreal_Engine_5.2.1.zip` file from **[Unreal Engine](https://www.unrealengine.com/en-US/linux)** and extract it into your home directory.
-2. Set a `UE_ROOT` environment variable to where you extracted the built Unreal Engine (you can add this to the bottom of `~/.bashrc` to make it permanent)
-
-    ```
-    export UE_ROOT=/home/[user]/Linux_Unreal_Engine_5.2.1
-    ```
 
 ### Project AirSim Component Locations
 
@@ -275,7 +266,7 @@ The sim lib components and unit test executables are built in the `ProjectAirSim
 
 The Plugin components are built in the `ProjectAirSim/unreal/Blocks/` folder using the Unreal Engine's build system.
 
-The packaged outputs (sim lib components, UE Plugin, Blocks stand-alone executable) are copied to the `ProjectAirSim/packages/` folder, where they can be picked up for external uses.
+If built, the packaged outputs (sim lib components, UE Plugin, Blocks stand-alone executable) are copied to the `ProjectAirSim/packages/` folder, where they can be picked up for external uses.
 
 The Python client files are in the `ProjectAirSim/client/python/` folder, with the Project AirSim Client Library in the `ProjectAirSim/client/python/projectairsim` sub-folder.
 
@@ -298,7 +289,7 @@ from projectairsim import ProjectAirSimClient, Drone, World
 For more details about using the client to connect, send/receive signals, etc, see the `hello_drone.py` example script contents or the specific **[API documentation](https://github.com/iamaisim/ProjectAirSim/blob/main/docs/api.md)** for your simulation scenario.
 
 ---
-## Working with Project Files
+## Working with Blocks Project Files
 
 ### Opening the Blocks Project in Unreal Editor
 
