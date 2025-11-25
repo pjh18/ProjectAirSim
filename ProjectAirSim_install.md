@@ -252,7 +252,7 @@ package_blocks_development = Package stand-alone Blocks environment executable f
 ```
 ### Building using the Unreal Engine Installed Build
 
-Running any of the `build.sh` options apart from `build.sh all` and and `build.sh package_plugin` is possible using the Unreal Engine Installed Build completed in the Initial Setup steps. Simply run the options that are required from the command line.
+Running any of the `build.sh` options apart from `build.sh all` and and `build.sh package_plugin` is possible using the Unreal Engine Installed Build completed in the Initial Setup steps. This is because the Unreal Engine build was compiled using the flag `-set:GameConfigurations="DebugGame;Development"`. Simply run the options that are required from the command line.
 
 #### Performing `build.sh all` and `build.sh package_plugin` *(not required, for reference only)*
 
