@@ -153,7 +153,7 @@ You may also need to install the latest drivers for your GPU to support the Vulk
 
     c) Make an installed build of Unreal Engine, using these steps:
 
-        ```
+        
         cd ~/UnrealEngine-5.2.1-release
 
         ./Setup.sh
@@ -168,7 +168,7 @@ You may also need to install the latest drivers for your GPU to support the Vulk
             -set:WithFullDebugInfo=false \
             -set:WithDDC=true \
             -set:GameConfigurations="DebugGame;Development"
-        ```
+        
 
     *Note: Making an installed build will take a **lot of disk space (~200 GB)** and a **lot of time (~4+ hours)** because it will build the engine and precompile the engine's **[DDC](https://dev.epicgames.com/documentation/en-us/unreal-engine/derived-data-cache?application_version=5.2)** content. However, using the installed build for Project AirSim development can save a lot of developer iteration time since the engine will never recompile and the bulk of the initial shader compilation will already be complete. This is similar to using a Windows binary engine downloaded from Epic's Launcher. Most of the original source package and build files can also be deleted to just keep the installed build version which is ~40 GB.*
 
